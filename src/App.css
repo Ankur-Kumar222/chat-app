@@ -1,38 +1,145 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #075e54;
+  color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 60px;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.user-list {
+  width: 30%;
+  background-color: #ffffff;
+  border-right: 1px solid #ececec;
+  overflow-y: auto;
+}
+
+.user-list h2 {
+  margin: 0;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ececec;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ececec;
+}
+
+.user-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5ddd5;
+}
+
+.message-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 60%;
+  align-self: flex-start;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message-text {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.message-status {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 5px;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ececec;
+  background-color: #ffffff;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+}
+
+.input-container button {
+  padding: 10px 20px;
+  background-color: #075e54;
   color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.input-container button:hover {
+  background-color: #0a7a66;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logout-button {
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #ff7878;
 }
